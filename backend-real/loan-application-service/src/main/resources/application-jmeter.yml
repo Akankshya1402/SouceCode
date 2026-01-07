@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+
+  kafka:
+    bootstrap-servers: dummy:9092
