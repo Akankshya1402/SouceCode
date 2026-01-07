@@ -1,0 +1,98 @@
+<div class="dashboard" *ngIf="!loading">
+
+  <!-- =========================
+       STATS GRID
+  ========================= -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div class="icon">
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+      </div>
+      <div class="info">
+        <div class="title">Total Loans</div>
+        <div class="value">{{ dashboard?.totalLoans }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon">
+        <i class="fa-solid fa-users"></i>
+      </div>
+      <div class="info">
+        <div class="title">Active Customers</div>
+        <div class="value">{{ dashboard?.activeCustomers }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon">
+        <i class="fa-solid fa-money-bill-wave"></i>
+      </div>
+      <div class="info">
+        <div class="title">EMI Collected</div>
+        <div class="value">
+          ₹ {{ dashboard?.totalEmiCollected | number }}
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div class="info">
+        <div class="title">Approved Loans</div>
+        <div class="value">{{ dashboard?.approvedLoans }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon">
+        <i class="fa-solid fa-clock"></i>
+      </div>
+      <div class="info">
+        <div class="title">Pending Loans</div>
+        <div class="value">{{ dashboard?.pendingLoans }}</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+      <div class="info">
+        <div class="title">Rejected Loans</div>
+        <div class="value">{{ dashboard?.rejectedLoans }}</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =========================
+       INFO
+  ========================= -->
+
+
+</div>
+
+<!-- =========================
+     CHARTS (NO *ngIf HERE)
+========================= -->
+<div class="charts-grid">
+
+  <div class="chart-card">
+    <h4>Loan Status Distribution</h4>
+    <canvas #pieCanvas></canvas>
+  </div>
+
+  <div class="chart-card">
+    <h4>Loans Overview</h4>
+    <canvas #barCanvas></canvas>
+  </div>
+
+</div>
+
+<div *ngIf="loading" class="section">
+  Loading dashboard data...
+</div>
