@@ -36,3 +36,48 @@ This system handles loan application, approval workflows, and repayment tracking
 ---
 
 ## 📂 Project Structure
+Loan-Management-System/
+│
+├── backend/ # Spring Boot microservices
+├── frontend/ # Angular application
+├── README.md
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 🔧 Backend Setup
+```bash
+cd backend
+mvn clean install
+mvn spring-boot:run
+💻 Frontend Setup
+cd frontend
+npm install
+ng serve
+📊 Key Highlights
+Designed and implemented 15+ REST API endpoints
+Built microservices-based architecture for scalability
+Implemented Kafka messaging for asynchronous processing
+Containerized services using Docker
+Integrated CI/CD pipeline using Jenkins
+Applied code quality checks using SonarQube
+
+Example:
+
+Login Page
+Dashboard
+Loan Application Form
+🎯 Use Case
+
+This system simulates real-world loan processing used in fintech platforms, handling:
+
+User onboarding
+Loan approval workflows
+Payment tracking
+Backend service communication
+👩‍💻 Author
+
+Akankshya Panda
+
